@@ -99,7 +99,7 @@
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #ffffff;
+      color: var(--clr-primary);
       margin-bottom: 16px;
     }
     .section-label::before {
@@ -201,8 +201,8 @@
       background: rgba(255,255,255,0.03);
     }
     .btn-outline:hover {
-      border-color: #ffffff;
-      color: #ffffff;
+      border-color: var(--clr-primary);
+      color: var(--clr-primary);
       background: var(--clr-primary-dim);
       transform: translateY(-2px);
     }
@@ -2473,34 +2473,3 @@
 
 </body>
 </html>
-
-<!-- Updated by ChatGPT -->
-<style>
-.portfolio-tag,
-.portfolio-title,
-.portfolio-cta,
-.service-name,
-.service-desc,
-.card-link {
-    color: #ffffff !important;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.75);
-}
-
-.portfolio-info {
-    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.25), transparent) !important;
-}
-
-.service-card::after {
-    content:'';
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to top, rgba(0,0,0,0.72), transparent 55%);
-    border-radius:inherit;
-    pointer-events:none;
-}
-
-.service-card > * {
-    position:relative;
-    z-index:2;
-}
-</style>
