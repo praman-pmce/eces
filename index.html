@@ -1622,6 +1622,27 @@
   }
 </style>
 
+
+
+<!-- FINAL MOBILE CLICK FIX: invisible mobile menu was blocking all taps -->
+<style id="final-mobile-click-unblock-fix">
+  @media (max-width: 768px) {
+    .mobile-menu {
+      pointer-events: none !important;
+      visibility: hidden !important;
+    }
+
+    .mobile-menu.open {
+      pointer-events: auto !important;
+      visibility: visible !important;
+    }
+
+    #header, .hamburger, .whatsapp-float, .floating-cta, .detail-page.open {
+      pointer-events: auto !important;
+    }
+  }
+</style>
+
 </head>
 
 <body>
