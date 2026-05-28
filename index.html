@@ -99,7 +99,7 @@
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--clr-primary);
+      color: #ffffff;
       margin-bottom: 16px;
     }
     .section-label::before {
@@ -201,8 +201,8 @@
       background: rgba(255,255,255,0.03);
     }
     .btn-outline:hover {
-      border-color: var(--clr-primary);
-      color: var(--clr-primary);
+      border-color: #ffffff;
+      color: #ffffff;
       background: var(--clr-primary-dim);
       transform: translateY(-2px);
     }
@@ -1375,6 +1375,216 @@
     @media (max-width: 768px) { .logo-wrap{width:48px;height:48px;} .brand-name{font-size:.82rem;} .whatsapp-float{right:16px;bottom:86px;width:56px;height:56px;} }
 
   </style>
+
+<!-- Final service-detail background update -->
+<style>
+/* Service-card detail page: use selected service image as soft background */
+.detail-hero {
+  background: #f7fbff !important;
+}
+
+.detail-hero-img {
+  opacity: 0.16 !important;
+  filter: brightness(1.05) saturate(0.9) !important;
+  object-fit: cover !important;
+}
+
+.detail-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(247,251,255,0.96) 0%, rgba(247,251,255,0.88) 48%, rgba(247,251,255,0.98) 100%),
+    linear-gradient(135deg, rgba(0,109,143,0.08), rgba(0,167,157,0.05)) !important;
+}
+
+/* Keep text same as original website, not white/dark-card style */
+.detail-title {
+  color: #0d2338 !important;
+  text-shadow: none !important;
+}
+
+.detail-desc {
+  color: #405a73 !important;
+  text-shadow: none !important;
+}
+
+.detail-tag {
+  color: #006d8f !important;
+  background: rgba(0,109,143,0.10) !important;
+  border: 1px solid rgba(0,128,150,0.24) !important;
+}
+
+/* Service cards on main page keep clean readable original style */
+.service-name,
+.service-desc,
+.card-link {
+  text-shadow: none !important;
+}
+
+.card-link {
+  color: #006d8f !important;
+}
+
+.service-name {
+  color: #0d2338 !important;
+}
+
+.service-desc {
+  color: #52677d !important;
+}
+
+/* No dark overlay on service cards */
+.service-card::after {
+  display: none !important;
+}
+
+/* Contact button goes to form */
+.detail-cta-btn {
+  color: #080c14 !important;
+}
+</style>
+
+
+
+
+
+<style id="final-card-visibility-fix">
+
+/* IMAGE GRID CARDS */
+.portfolio-info .portfolio-tag,
+.portfolio-info .portfolio-title,
+.portfolio-info .portfolio-cta{
+    color:#ffffff !important;
+    text-shadow:0 2px 10px rgba(0,0,0,0.85) !important;
+}
+
+.portfolio-info{
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.45) 45%,
+        transparent 100%
+    ) !important;
+}
+
+/* WHITE SERVICE CARDS -> KEEP ORIGINAL COLORS */
+.service-name{
+    color:#0d2338 !important;
+    text-shadow:none !important;
+}
+
+.service-desc{
+    color:#52677d !important;
+    text-shadow:none !important;
+}
+
+.card-link{
+    color:#006d8f !important;
+    text-shadow:none !important;
+}
+
+</style>
+
+
+<style id="final-why-section-style">
+#why {
+  padding: 110px 0;
+  background: #f7fbff;
+  position: relative;
+  overflow: hidden;
+}
+
+#why .section-header {
+  margin-bottom: 60px;
+}
+
+#why .section-title {
+  max-width: 1050px;
+}
+
+.why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+}
+
+.why-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(13,35,56,0.08) !important;
+  border-radius: 28px !important;
+  padding: 42px 32px !important;
+  min-height: 300px !important;
+  box-shadow: 0 12px 32px rgba(13,35,56,0.07) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.why-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(0,128,150,0.22) !important;
+  box-shadow: 0 20px 46px rgba(13,35,56,0.11) !important;
+}
+
+.why-card::after {
+  display: none !important;
+}
+
+.why-num {
+  font-family: var(--font-display);
+  font-size: 3.9rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  margin-bottom: 12px !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: rgba(0,109,143,0.10) !important;
+  background-clip: initial !important;
+  color: rgba(0,109,143,0.10) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+
+.why-card:hover .why-num,
+.why-card.active .why-num {
+  color: rgba(0,109,143,0.55) !important;
+  -webkit-text-fill-color: rgba(0,109,143,0.55) !important;
+  transform: scale(1.08) !important;
+  text-shadow: none !important;
+}
+
+
+.why-title {
+  font-family: var(--font-display);
+  font-size: 1.12rem !important;
+  font-weight: 800 !important;
+  color: #0d2338 !important;
+  margin-bottom: 18px !important;
+  line-height: 1.35 !important;
+  text-shadow: none !important;
+}
+
+.why-desc {
+  font-size: 0.95rem !important;
+  line-height: 1.85 !important;
+  color: #52677d !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .why-card {
+    min-height: auto !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -1720,56 +1930,67 @@
   <!-- =====================================================
        WHY CHOOSE US
        ===================================================== -->
-  <section id="why">
-    <div class="grid-bg" aria-hidden="true"></div>
-    <div class="container" style="position:relative;z-index:1;">
-      <div class="section-header reveal">
-        <div class="section-label">Our Advantage</div>
-        <h2 class="section-title">Why Clients Choose <span>Expert CAD &amp; Engineering Studio</span></h2>
-        <p class="section-sub">We've built our studio around the values that matter most to solar installers, contractors, and engineers relying on our work every day.</p>
+  
+<section id="why">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Why Clients Choose <span>Expert CAD &amp; Engineering Studio</span></h2>
+      <p class="section-sub">
+        We've built our studio around the values that matter most to solar installers,
+        contractors, and engineers relying on our work every day.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-num">01</div>
+        <h3 class="why-title">Reliable &amp; Consistent</h3>
+        <p class="why-desc">
+          We've delivered hundreds of projects on time with zero missed deadlines.
+          Our clients trust us to be the dependable backend of their operations — every single time.
+        </p>
       </div>
 
-      <div class="why-grid">
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-num">02</div>
+        <h3 class="why-title">Fast Turnaround</h3>
+        <p class="why-desc">
+          Most standard permit packages are delivered quickly with rush options available.
+          We understand that speed to permit means faster cash flow for your business.
+        </p>
+      </div>
 
-        <div class="why-card reveal reveal-delay-1">
-          <div class="why-num">01</div>
-          <h3 class="why-title">Reliable &amp; Consistent</h3>
-          <p class="why-desc">We've delivered hundreds of projects on time with zero missed deadlines. Our clients trust us to be the dependable backend of their operations — every single time.</p>
-        </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-num">03</div>
+        <h3 class="why-title">Accurate Designs</h3>
+        <p class="why-desc">
+          Every drawing passes a multi-layer review before delivery.
+          We catch issues early to help reduce AHJ corrections, delays, and rework.
+        </p>
+      </div>
 
-        <div class="why-card reveal reveal-delay-2">
-          <div class="why-num">02</div>
-          <h3 class="why-title">Fast Turnaround</h3>
-          <p class="why-desc">Most standard solar permit packages are delivered in 24–48 hours. Rush options available. We understand that speed to permit means faster cash flow for your business.</p>
-        </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-num">04</div>
+        <h3 class="why-title">Transparent Workflow</h3>
+        <p class="why-desc">
+          Clear communication, organized updates, and smooth coordination from start to finish.
+          You always know what is happening with your project.
+        </p>
+      </div>
 
-        <div class="why-card reveal reveal-delay-3">
-          <div class="why-num">03</div>
-          <h3 class="why-title">Accurate Designs</h3>
-          <p class="why-desc">Every drawing passes a multi-layer internal review before delivery. We catch errors before the AHJ does — saving you costly resubmittals and delays.</p>
-        </div>
-
-        <div class="why-card reveal reveal-delay-4">
-          <div class="why-num">04</div>
-          <h3 class="why-title">Easy Communication</h3>
-          <p class="why-desc">Direct email, WhatsApp, and project portal access. You'll always know the status of your project and reach a real engineer — not a chatbot or ticketing queue.</p>
-        </div>
-
-        <div class="why-card reveal reveal-delay-5">
-          <div class="why-num">05</div>
-          <h3 class="why-title">Transparent Workflow</h3>
-          <p class="why-desc">No hidden steps, no surprise costs. From intake to final delivery, you see exactly where your project stands with clear milestones and open communication.</p>
-        </div>
-
-        <div class="why-card reveal reveal-delay-6">
-          <div class="why-num">06</div>
-          <h3 class="why-title">Easy Payment</h3>
-          <p class="why-desc">Flexible payment options including PayPal, bank transfer, and UPI. Pay per project or lock in volume pricing for high-frequency clients. No long-term contracts required.</p>
-        </div>
-
+      <div class="why-card reveal reveal-delay-5">
+        <div class="why-num">05</div>
+        <h3 class="why-title">Professional Support</h3>
+        <p class="why-desc">
+          We work closely with installers, EPCs, contractors, and engineering teams to provide
+          dependable long-term design support.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <div class="glow-divider"></div>
 
@@ -2473,3 +2694,4 @@
 
 </body>
 </html>
+
